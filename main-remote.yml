@@ -1,0 +1,11 @@
+---
+# Exercise for setting up a web server
+- name: Exercise for setting up a web server in an EC2
+  # use the pulic IP of the exiting VM
+  hosts: all
+  user: ubuntu
+  become: true
+  become_method: sudo
+  become_user: root
+  roles:
+    - setup
